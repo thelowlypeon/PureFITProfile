@@ -1,0 +1,15 @@
+{
+  "originHash" : "e7ce59a4028886212abbd3bf98859bd6aba02bee444e8eb4c97beed4a54ee3cc",
+  "pins" : [
+    {
+      "identity" : "purefit",
+      "kind" : "localSourceControl",
+      "location" : "/Users/peter/Documents/purefit",
+      "state" : {
+        "revision" : "d0effd4d57d862ca7773520fe7b635f218d3487f",
+        "version" : "0.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}

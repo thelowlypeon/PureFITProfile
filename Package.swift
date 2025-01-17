@@ -11,14 +11,25 @@ let package = Package(
             name: "PureFITProfile",
             targets: ["PureFITProfile"]),
     ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        .package(url: "../purefit", from: "0.0.2"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "PureFITProfile"),
+            name: "PureFITProfile",
+            dependencies: [
+                .product(name: "PureFIT", package: "purefit"),
+            ]
+        ),
         .testTarget(
             name: "PureFITProfileTests",
-            dependencies: ["PureFITProfile"]
+            dependencies: ["PureFITProfile"],
+            resources: [
+                .copy("Fixtures")
+            ]
         ),
     ]
 )
